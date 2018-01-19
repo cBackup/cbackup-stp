@@ -1,0 +1,79 @@
+{
+  "metadata": {
+    "name": "stp_mapping",
+    "author": "cBackup Team",
+    "copyright": "Copyright (C) 2017 cBackup Team. All rights reserved.",
+    "license": "GNU Affero General Public License (AGPLv3)",
+    "authorName": "Imants Cernovs",
+    "authorEmail": "cernovs.imants@gmail.com",
+    "authorUrl": "www.cbackup.me",
+    "version": "1.0.0",
+    "compatibility": "0.1.2",
+    "description": "Plugin which draw STP tree",
+    "widget": "node"
+  },
+  "form" : {
+    "settings": {
+      "fields" : [
+        {
+          "type": "toggle",
+          "label": "Check node availability",
+          "name": "check_node_availability",
+          "default": "1",
+          "description": "Check if node is available. SNMP get request will be made during tree generating.",
+          "toggle": {
+            "data-on": "Yes",
+            "data-off": "No"
+          },
+          "options": {
+            "uncheck": "0"
+          }
+        },
+        {
+          "type": "textInput",
+          "label": "SNMP timeout",
+          "name": "snmp_timeout",
+          "default": "500000",
+          "description": "The number of microseconds until the first timeout.",
+          "options": {
+            "class": "form-control",
+            "required": true,
+            "type": "number",
+            "min": "1"
+          }
+        },
+        {
+          "type": "textInput",
+          "label": "SNMP retries",
+          "name": "snmp_retries",
+          "default": "2",
+          "description": "The number of retries in case timeout occurs.",
+          "options": {
+            "class": "form-control",
+            "required": true,
+            "type": "number",
+            "min": "1"
+          }
+        }
+      ]
+    },
+    "widget": {
+      "fields" : [
+        {
+          "type": "toggle",
+          "label": "Enable widget",
+          "name": "widget_enabled",
+          "default": "0",
+          "description": "Enable widget in node view page.",
+          "toggle": {
+            "data-on": "Yes",
+            "data-off": "No"
+          },
+          "options": {
+            "uncheck": "0"
+          }
+        }
+      ]
+    }
+  }
+}
