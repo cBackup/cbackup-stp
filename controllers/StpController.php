@@ -26,7 +26,7 @@ namespace app\modules\plugins\stpmapping\controllers;
 
 use Yii;
 use yii\filters\AccessControl;
-use app\filters\AjaxFilter;
+use yii\filters\AjaxFilter;
 use yii\helpers\Json;
 use yii\web\Controller;
 use app\modules\plugins\stpmapping\models\Stp;
